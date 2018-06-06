@@ -229,42 +229,6 @@ public:
 
 	}
 
-	template <class K2>
-	void rearrange(Map<K2, TValue>& rhs) {
-
-		int n = 0;
-
-		for (int i = 0; i < count; i++) {
-
-			for (int j = 0; j < count; j++) {
-
-				if (this->array[i].value == rhs.array[j].value) {
-
-					n = j;
-
-					break;
-
-				}
-
-			}
-
-			Element<TKey, TValue>* tmp = new Element<TKey, TValue>();
-
-			tmp->value = this->array[n].value;
-
-			tmp->key = this->array[n].key;
-
-			this->array[n].value = this->array[i].value;
-
-			this->array[n].key = this->array[i].key;
-
-			this->array[i].value = tmp->value;
-
-			this->array[i].key = tmp->key;
-
-		}
-
-	}
 
 };
 

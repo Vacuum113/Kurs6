@@ -21,6 +21,8 @@ private:
 public:
 
 	Book() {}
+	
+	~Book() {}
 
 	void print();
 

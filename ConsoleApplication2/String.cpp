@@ -55,7 +55,7 @@ String::~String() {
 
 	if (array != NULL) {
 
-		delete array;
+		delete[] array;
 
 	}
 

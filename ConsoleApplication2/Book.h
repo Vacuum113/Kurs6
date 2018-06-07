@@ -26,8 +26,9 @@ public:
 
 	void print();
 
-	void add(String& F, String& T, int Y, int C);
+	//Добавление данных в объект
 
+	void add(String& F, String& T, int Y, int C);
 
 	void addOpen(String F, String T, int Y, int C);
 
@@ -41,11 +42,19 @@ public:
 
 	Book(Book* name);
 
+	//Перегрузка оператора сравнения
+
 	int operator== (Book& name);
+
+	//Перегрузка оператора сравнения по ФИО
 
 	int operator<(Book& book);
 
+	//Перегрузка оператора сравнения по ФИО
+
 	int operator>(Book& book);
+
+	//Перегрузка оператора сравнения по году
 
 	static int comp(Book, Book);
 

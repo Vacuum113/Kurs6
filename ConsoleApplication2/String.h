@@ -4,6 +4,8 @@
 
 using namespace std;
 
+//¬спомогательный класс String дл€ работы с строками
+
 class String {
 
 private:

@@ -42,6 +42,7 @@ public:
 
 };
 
+//Конструктор
 
 template <class TKey, class TValue>
 Map<TKey,TValue>::Map(int  k) {
@@ -52,7 +53,7 @@ Map<TKey,TValue>::Map(int  k) {
 
 }
 
-
+//Деструктор
 
 template <class TKey, class TValue>
 Map<TKey, TValue>::~Map() {
@@ -60,6 +61,8 @@ Map<TKey, TValue>::~Map() {
 	delete[] array;
 
 }
+
+//Метод для внесение элеменда в коллекцию
 
 template <class TKey, class TValue>
 void Map<TKey, TValue>::put(TKey key, TValue value) {
@@ -85,6 +88,8 @@ void Map<TKey, TValue>::put(TKey key, TValue value) {
 	count++;
 
 }
+
+//Метод для получения элемента из коллекции
 
 template <class TKey, class TValue>
 TValue* Map<TKey, TValue>::get(TKey key, int &number) {
@@ -129,6 +134,8 @@ TValue* Map<TKey, TValue>::get(TKey key, int &number) {
 
 }
 
+//Метод для удаления элемента
+
 template <class TKey, class TValue>
 void Map<TKey, TValue>::remove(TValue value) {
 
@@ -146,12 +153,15 @@ void Map<TKey, TValue>::remove(TValue value) {
 
 }
 
+//Метод для получения значения count
 
 template <class TKey, class TValue>
 int Map<TKey, TValue>::Count(){
 
 	return count;
 }
+
+//Метод для получения всех элементов в новый массив
 
 template <class TKey, class TValue>
 void Map<TKey, TValue>::getALL(TValue*& newArr) {
@@ -169,6 +179,8 @@ void Map<TKey, TValue>::getALL(TValue*& newArr) {
 	}
 
 }
+
+//Обычная сортировка по убыванию по ФИО
 
 template <class TKey, class TValue>
 void Map<TKey, TValue>::sort_descen() {
@@ -195,6 +207,8 @@ void Map<TKey, TValue>::sort_descen() {
 
 }
 
+//Обычная сортировка по возрастанию по ФИО
+
 template <class TKey, class TValue>
 void Map<TKey, TValue>::sort_ascen() {
 
@@ -220,6 +234,8 @@ void Map<TKey, TValue>::sort_ascen() {
 
 }
 
+//Сортировка по возрастанию по году
+
 template <class TKey, class TValue>
 void Map<TKey, TValue>::sort_spec_ascen() {
 
@@ -244,6 +260,9 @@ void Map<TKey, TValue>::sort_spec_ascen() {
 	}
 
 }
+
+
+//Сортировка по убыванию по году
 
 template <class TKey, class TValue>
 void Map<TKey, TValue>::sort_spec_descen() {
